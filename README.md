@@ -1,1 +1,1 @@
-# cericksen4.github.io
+Webmaster 2025 Submission - Cooper Ericksen
