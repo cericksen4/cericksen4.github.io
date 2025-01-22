@@ -9,6 +9,10 @@
     --color-content: #9AE19D;
     --color-contentaccent: #011627;
     --color-contentaccent2: #FFFFFF;
+
+    --color-contentalt: #6CD4FF;
+    --color-contentaltaccent: #011627;
+    --color-contentaltaccent2: #B6EAFF;
 }
 
 * {
@@ -22,8 +26,8 @@ body {
 
 .header {
     text-align: center;
-    font-size: clamp(16px, 4vw, 36px);
-    padding: 16px;
+    font-size: clamp(16px, 5vw, 36px);
+    padding: 36px;
     background-color: var(--color-mainaccent);
     color: var(--color-main);
 }
@@ -35,9 +39,14 @@ body {
     margin: 16px; 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
     max-width: 1000px;
     margin-inline: auto;
+}
+
+.sectionalt {
+    background-color: var(--color-contentalt);
+    color: var(--color-contentaltaccent)
 }
 
 .section > * {
@@ -70,7 +79,7 @@ body {
     display: grid;
     position: sticky;
     top: 0;
-    grid-template-columns: 3fr 1fr 1fr 1fr; 
+    grid-template-columns: 2fr 1fr 1fr 1fr; 
     width: 100%;
     background-color: var(--color-nav);
     transition: 0.5s;
@@ -83,7 +92,11 @@ body {
 
     .section {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 4fr 1fr 4fr 2fr;
+        grid-template-rows: 1fr 2fr 4fr;
+    }
+
+    .sectionalt {
+        grid-template-rows: 1fr 4fr 2fr;
     }
 
     .section > * {
@@ -97,6 +110,10 @@ body {
         width: 80vw;
         max-width: 400px;
         height: auto;
+    }
+
+    .reference > *{
+        grid-column: span 2;
     }
 }
 
@@ -113,6 +130,28 @@ body {
     background-color: var(--color-navaccent);
     color: var(--color-nav);
     text-decoration: underline;
+}
+
+.reference {
+    background-color: var(--color-content);
+    color: var(--color-contentaccent);
+    padding: 16px;
+    margin: 16px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.reference > * {
+    border: 5px dotted var(--color-contentaccent2);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    font-size: clamp(10px, 2vw, 20px);
 }
 
 .credit {
