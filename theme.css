@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 :root {
     --color-main: #FFFFFF;
     --color-mainaccent: #6991FF;
@@ -6,13 +8,17 @@
     --color-nav: #114B5F;
     --color-navaccent: #FFFFFF;
 
-    --color-content: #9AE19D;
+    /* --color-content: #9AE19D; */
+    --color-content: rgba(154,225,157,0.5);
     --color-contentaccent: #011627;
     --color-contentaccent2: #FFFFFF;
 
-    --color-contentalt: #6CD4FF;
+    /* --color-contentalt: #6CD4FF; */
+    --color-contentalt: rgba(108,212,255,0.5);
     --color-contentaltaccent: #011627;
-    --color-contentaltaccent2: #B6EAFF;
+    --color-contentaltaccent2: #FFFFFF;
+
+    --color-hyperlinks: #00FF00;
 }
 
 * {
@@ -21,20 +27,22 @@
 } 
 
 body {
-    background-color: var(--color-main);
+    /* background-color: var(--color-main); */
+    background-image: url("/images/leafbackground.jpg");
+    font-family: "Oswald", serif;
 }
 
 .header {
     text-align: center;
-    font-size: clamp(16px, 5vw, 36px);
+    font-size: clamp(16px, 6vw, 55px);
     padding: 36px;
-    background-color: var(--color-mainaccent);
+    /* background-color: var(--color-mainaccent); */
     color: var(--color-main);
 }
 
 .section {
     background-color: var(--color-content);
-    color: var(--color-contentaccent);
+    color: var(--color-contentaccent2);
     padding: 16px;
     margin: 16px; 
     display: grid;
@@ -46,11 +54,12 @@ body {
 
 .sectionalt {
     background-color: var(--color-contentalt);
-    color: var(--color-contentaltaccent)
+    color: var(--color-contentaltaccent2)
 }
 
 .section > * {
-    border: 5px dotted var(--color-contentaccent2);
+    /* background-color: var(--color-contentaccent2); */
+    border: 2px dashed var(--color-contentaccent2);
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -134,7 +143,7 @@ body {
 
 .reference {
     background-color: var(--color-content);
-    color: var(--color-contentaccent);
+    color: var(--color-contentaccent2);
     padding: 16px;
     margin: 16px; 
     display: grid;
@@ -152,6 +161,10 @@ body {
     text-align: center;
     align-content: center;
     font-size: clamp(10px, 2vw, 20px);
+}
+
+.reference a {
+    color: var(--color-hyperlinks);
 }
 
 .credit {
