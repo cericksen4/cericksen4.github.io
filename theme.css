@@ -32,8 +32,8 @@
 
 body {
     /* background-color: var(--color-main); */
-    font-family: "Oswald", serif;
-    font-weight: 300;
+    font-family: Oswald, serif;
+    font-weight: 400;
 }
 
 .header {
@@ -186,7 +186,7 @@ body {
     color: var(--color-navaccent);
     padding: 20px;
     text-decoration: none;
-    font-size: clamp(8px, 2.75vw, 26px); 
+    font-size: clamp(8px, 2.5vw, 26px); 
     text-align: center;
     transition: 0.5s;
 }
