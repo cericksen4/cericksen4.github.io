@@ -7,6 +7,7 @@
 
     --color-nav: #114B5F;
     --color-navaccent: #FFFFFF;
+    --color-navhover: rgba(255,255,255,0.1);
 
     /* --color-content: #9AE19D; */
     --color-content: rgba(154,225,157,var(--content-transparency));
@@ -189,12 +190,37 @@ body {
     font-size: clamp(8px, 2.5vw, 26px); 
     text-align: center;
     transition: 0.5s;
+    position: relative;
 }
 
-.topnav a:hover {
+.topnav a:hover::after {
+    height: 100%;
+}
+
+.topnav a:hover::before {
+    height: 5px;
+}
+
+.topnav a::after {
+    content: '';
+    background-color: var(--color-navhover);
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: height 0.3s ease;
+}
+
+.topnav a::before {
+    content: '';
     background-color: var(--color-navaccent);
-    color: var(--color-nav);
-    text-decoration: underline;
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: height 0.2s ease;
 }
 
 .reference {
